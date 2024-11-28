@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="Css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>To-Do List</h1>
+        </header>
+
+        <section class="form-section">
+            <form id="task-form">
+                <input type="text" id="title" placeholder="Task Title" required>
+                <textarea id="description" placeholder="Task Description"></textarea>
+                <div class="form-row">
+                    <select id="priority">
+                        <option value="low">Low Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                    <input type="text" id="category" placeholder="Category">
+                </div>
+                <button type="submit" class="btn-add">Add Task</button>
+            </form>
+        </section>
+
+        <section id="filters">
+            <h3>Filter Tasks</h3>
+            <div class="filter-buttons">
+                <button class="btn-filter" data-priority="all">All</button>
+                <button class="btn-filter" data-priority="low">Low</button>
+                <button class="btn-filter" data-priority="medium">Medium</button>
+                <button class="btn-filter" data-priority="high">High</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div id="task-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Filtered Tasks</h2>
+            <div id="filtered-tasks" class="task-list"></div>
+        </div>
+    </div>
+
+    <script src="Js/app.js"></script>
+</body>
+</html>
